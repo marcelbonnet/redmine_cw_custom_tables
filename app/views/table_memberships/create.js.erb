@@ -1,4 +1,4 @@
-$('#tab-content-memberships').html('<%= escape_javascript(render :partial => 'principal_memberships/index', :locals => {:principal => @principal}) %>');
+$('#tab-content-memberships').html('<%= escape_javascript(render :partial => 'table_memberships/tab_group_edit', :locals => {:group => @group}) %>');
 hideOnLoad();
 
 <% if @members.present? && @members.all? {|m| m.persisted? } %>
@@ -8,5 +8,5 @@ hideOnLoad();
   <% end %>
 <% elsif @members.present? %>
   <% errors = @members.collect {|m| m.errors.full_messages}.flatten.uniq.join(', ') %>
-  alert('<%= raw(escape_javascript(l(:notice_failed_to_save_members, :errors => errors))) %>');
+  alert('<%= raw(escape_javascript(l(:notice_failed_to_save_table_members, :errors => errors))) %>');
 <% end %>

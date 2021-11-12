@@ -2,10 +2,10 @@
   <legend><%= toggle_checkboxes_link('.projects-selection input:enabled') %><%= l(:label_custom_table) %></legend>
   <div class="objects-selection">
     <div class="projects-selection">
-      <%# application_helper#render_project_nested_lists fazer para table %>
+      <%#TODO application_helper#render_project_nested_lists : usar como exemplo para fazer a lista de tabelas aninhadas %>
     <% @tables.each do |table| %>
       <label>
-        <%= check_box_tag('membership[project_ids][]', table.id, false, :id => nil, :disabled => @group.member_of?(table)) %> <%= table.name %>
+        <%= check_box_tag('membership[table_member_ids][]', table.id, false, :id => nil, :disabled => @group.member_of_table?(table)) %> <%= table.name %>
       </label>
     <% end %>
     </div>
