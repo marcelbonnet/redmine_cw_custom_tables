@@ -1,4 +1,4 @@
-$('#tab-content-memberships').html('<%= escape_javascript(render :partial => 'table_memberships/tab_group_edit', :locals => {:group => @group}) %>');
+$('#tab-content-table_memberships').html('<%= escape_javascript(render :partial => 'table_memberships/tab_group_edit', :locals => {:group => @group}) %>');
 hideOnLoad();
 
 <% if @members.present? && @members.all? {|m| m.persisted? } %>

@@ -16,6 +16,7 @@ class TableMembershipsController < ApplicationController
   end
 
   def create
+    params.require(:membership)
     @members = TableMember.create_table_memberships(@group, params[:membership])
     respond_to do |format|
       format.html {redirect_to_tab @group}
