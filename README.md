@@ -1,3 +1,9 @@
+CLOSED AND MOVED TO NEW PROJECT
+===============================
+
+This project was refactored. Its new repo: https://github.com/marcelbonnet/redmine_tables 
+
+
 Redmine Custom Tables
 ==================
 
